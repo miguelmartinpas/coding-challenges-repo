@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start:challenge:backend": "npx nx serve challenge-backend",
-    "start:tgol:app": "npx nx serve the-game-of-life-app"
+    "start:tgol:app": "npx nx serve the-game-of-life-app",
+    "build:tgol:app": "npx nx build the-game-of-life-app"
   },
   "private": true,
   "devDependencies": {
