@@ -30,5 +30,22 @@ export const useTheGameOfLife = () => {
         return theGameOfLife.current?.getGenerations() || 0;
     }
 
-    return {tgol, play: handleOnPlay, reset: handleOnReset, getGenerations: handleGetGenerations, rows: ROWS, columns: COLUMNS}
+    const handleCreateLife = (x: number, y: number, alive: boolean) => {
+        if (theGameOfLife.current) { 
+            theGameOfLife.current?.createLife(x,y,alive);
+            setTgol({matrix: theGameOfLife.current.getMatrix(), total: theGameOfLife.current.countLife()});
+        }
+    }
+
+    
+
+    return {
+        tgol, 
+        play: handleOnPlay, 
+        reset: handleOnReset, 
+        getGenerations: handleGetGenerations, 
+        createLife: handleCreateLife,
+        rows: ROWS, 
+        columns: COLUMNS
+    };
 }

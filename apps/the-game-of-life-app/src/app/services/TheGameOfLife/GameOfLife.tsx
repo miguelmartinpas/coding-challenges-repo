@@ -65,10 +65,10 @@ export class TheGameOfLife {
         return this;
     }
 
-    public createLife(rowIndex?: number, columIndex?: number): TheGameOfLife {
+    public createLife(rowIndex?: number, columIndex?: number, alive = true): TheGameOfLife {
         const row = rowIndex || Math.floor(Math.random() * this.rows);
         const column = columIndex || Math.floor(Math.random() * this.columns);
-        this.matrix[row][column] = true;
+        this.matrix[row][column] = alive;
         return this;
     }
 
