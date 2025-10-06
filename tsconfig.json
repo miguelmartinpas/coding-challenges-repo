@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/challenge-backend-e2e"
+    },
+    {
+      "path": "./apps/challenge-backend"
+    },
+    {
+      "path": "./packages/shared-ui"
+    },
+    {
+      "path": "./apps/the-game-of-life-app"
+    }
+  ]
+}

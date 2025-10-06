@@ -1,0 +1,8 @@
+{
+  "name": "@coding-challenges-repo/the-game-of-life-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.5.1"
+  }
+}

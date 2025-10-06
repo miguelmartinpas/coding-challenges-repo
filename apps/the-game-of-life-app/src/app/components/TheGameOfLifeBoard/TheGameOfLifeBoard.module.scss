@@ -1,0 +1,31 @@
+.the-game-of-life-board {
+    &__board {
+        width: fit-content;
+        display: grid;
+        place-items: center;
+        background-color: black;
+    
+        &__row {
+            display: flex;
+            flex-direction: row;
+        }
+    
+        &__cell {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            border-color: lightblue;
+            border-width: .25px;
+            border-style: solid;
+            opacity: 0.5;
+    
+            &--selected {
+                background-color: lightblue;
+                border-radius: 4px;
+                padding: 1px;
+            }
+    
+        }
+    }
+}
