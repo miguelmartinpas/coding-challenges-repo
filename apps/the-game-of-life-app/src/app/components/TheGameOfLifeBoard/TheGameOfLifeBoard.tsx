@@ -6,14 +6,12 @@ const baseClassName = 'the-game-of-life-board'
 
 
 export const GridBoard = () => {
-    const { tgol, play } = useTheGameOfLife();
+    const { tgol, play, reset, getGenerations } = useTheGameOfLife();
 
     const isSelected = (rowIndex: number, columnIndex: number) => tgol?.matrix && tgol.matrix[rowIndex][columnIndex];
 
-    console.log('cahnge...');
-
     return <div className={styles[baseClassName]}>
-        <button onClick={play}>PLAY ({tgol?.total})</button>
+        <button onClick={play}>PLAY ({tgol?.total})</button> -Genreation: {getGenerations()}- <button onClick={reset}>RESET</button>
         <div className={styles[`${baseClassName}__board`]}>
         {tgol?.matrix?.map((columns, rowIndex) => {
             return (

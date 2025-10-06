@@ -20,5 +20,15 @@ export const useTheGameOfLife = () => {
         }
     }
 
-    return {tgol, play: handleOnPlay, rows: ROWS, columns: COLUMNS}
+    const handleOnReset = (): void => {
+        if (theGameOfLife.current) { 
+            setTgol({matrix: theGameOfLife.current.clean().getMatrix(), total: theGameOfLife.current.countLife()});
+        }
+    }
+
+    const handleGetGenerations = (): number => {
+        return theGameOfLife.current?.getGenerations() || 0;
+    }
+
+    return {tgol, play: handleOnPlay, reset: handleOnReset, getGenerations: handleGetGenerations, rows: ROWS, columns: COLUMNS}
 }
