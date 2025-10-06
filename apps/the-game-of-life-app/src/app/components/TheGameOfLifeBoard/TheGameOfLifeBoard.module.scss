@@ -1,9 +1,27 @@
 .the-game-of-life-board {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    gap: 8px;
+    margin-top: 32px;
+
     &__header {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        margin-bottom: 10px;
+        justify-content: space-around;  
+
+        &-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: left;
+        }
     }
 
     &__board {

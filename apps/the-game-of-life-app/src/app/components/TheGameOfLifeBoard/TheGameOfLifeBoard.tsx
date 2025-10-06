@@ -20,10 +20,14 @@ export const GridBoard = () => {
 
     return <div className={styles[baseClassName]}>
         <div className={styles[`${baseClassName}__header`]}>
-            <button onClick={play}>PLAY</button> 
-            <div>Alive: {tgol?.total}</div>
-            <div>Generation: {getGenerations()}</div>
-            <button onClick={reset}>RESET</button>
+            <div className={styles[`${baseClassName}__header-cta`]}>
+                <button onClick={play}>PLAY</button> 
+                <button onClick={reset}>RESET</button>
+            </div>
+            <div className={styles[`${baseClassName}__header-info`]}>
+                <div>Alive: {tgol?.total}</div>
+                <div>Generation: {getGenerations()}</div>
+            </div>
         </div>
         <div className={styles[`${baseClassName}__board`]}>
         {tgol?.matrix?.map((columns, rowIndex) => {
